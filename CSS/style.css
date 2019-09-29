@@ -1,114 +1,257 @@
 *{
+	box-sizing: border-box;
 	font-family:Century Gothic;
 	color:#ffffff;
 }
 
-label.title{
-	font-size: 20px;
-}
-
-div.tumblr-post{
-	width: 150px;
+hr{
+	box-shadow: none;
+	border-radius:20px;
 }
 
 p{
 	text-align: justify;
 }
 
-div.cabecalho{
-	margin-left:12.5%;
-	margin-right:12.5%;
-	background-color:#3b284b;
-    border-radius: 20px;
+.post{
+	padding: 2px;
 }
 
-div.corpo{
-	padding: 2.5%;
-	padding-left: 5%;
-	padding-right: 5%;
-	background-color:#614f7c;
-	border-bottom-left-radius: 20px;
-	border-bottom-right-radius: 20px;
+.title{
+	font-weight: bold;
+	font-size: 18px;
 }
 
-table.escolinhas{
-	width: 900px;
+.home{         
+	background-color: #744e94;
+	display: flex;
+    flex-direction: row;
+    justify-content: center;
+	align-items: center
 }
 
-hr{
-	margin-left:12.5%;
-	margin-right:12.5%;
-	background-color:#3b284b;
-	border-radius:20px;
-}
-
-label.titulo{
+.titulo{
 	color:#ffffff;
 	font-family:Century Gothic;
 	font-size:50px;
-	margin-bottom:1%;
 }
 
-label.subtitulo{
+.subtitulo{
 	color:#f8f8f8;
 	font-family:Century Gothic;
 	font-size:15px;
 }
 
-img.perfil{
-	align:right;
+.perfil{
 	border-radius:200px;
 }
 
-
-img{
-	align:right;
-	border-radius:20px;
+.pagewrap{
+	background-color: #744e94;
+	padding: 20px auto;
 }
 
-nav{
-	margin-left:12.5%;
-	margin-right:12.5%;
-	border-radius:20px;
+.header{
 	background-color: #3b284b;
 }
 
-ul {
-	list-style-type: none;
-	margin: 0;
-	padding-left: 20;
-	overflow: hidden;
-}
-
-li.a{
-
+.content{
+	height: 100%;
+	padding: 20px;
+	border-color: #3b284b;
+	width: 60%;
 	float: left;
-	display: list-item;
+	background-color: #744e94;
 }
 
-li.nav{
-	border-radius:20x;
-	float: left;
+.sidebar{
+	border-color: #3b284b;
+	padding: 9px;
+	float: right;
+	background-color: #744e94;
 }
 
-li a {
-	display: block;
-	color: white;
-	text-align: center;
-	padding: 14px 16px;
-	text-decoration: none;
+.footer{
+	clear: both;
+	background-color: #3b284b;
 }
 
-a.lista2{
-	display: grid;
-	text-decoration: underline;
+
+.nav {
+  height: 50px;
+  width: 100%;
+  background-color: #3b284b;
+  position: relative;
 }
 
-/* Change the link color to #111 (black) on hover */
-li a.pontas:hover {
-	background-color: #614f7c;
-	border-radius:20px;
+.nav > .nav-header {
+  display: inline;
 }
-li a.meio:hover {
-	background-color: #614f7c;
+
+.nav > .nav-header > .nav-title {
+  display: inline-block;
+  font-size: 22px;
+  color: #fff;
+  padding: 10px 10px 10px 10px;
+}
+
+.nav > .nav-btn {
+  display: none;
+}
+
+.nav > .nav-links {
+  display: inline;
+  float: right;
+  font-size: 18px;
+}
+
+.nav > .nav-links > a {
+  display: inline-block;
+  padding: 13px 10px 13px 10px;
+  text-decoration: none;
+  color: #efefef;
+}
+
+.nav > .nav-links > a:hover {
+	background-color: #4a325e;
+}
+
+.nav > #nav-check {
+  display: none;
+}
+
+@media (max-width:600px) {
+  .nav > .nav-btn {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  }
+  .nav > .nav-btn > label {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 13px;
+  }
+  .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
+	background-color: #3b284b;
+  }
+  .nav > .nav-btn > label > span {
+    display: block;
+    width: 25px;
+    height: 10px;
+    border-top: 2px solid #eee;
+  }
+  .nav > .nav-links {
+    position: absolute;
+    display: block;
+    width: 100%;
+	background-color: #4a325e;
+    height: 0px;
+    transition: all 0.3s ease-in;
+    overflow-y: hidden;
+    top: 50px;
+    left: 0px;
+  }
+  .nav > .nav-links > a {
+    display: block;
+    width: 100%;
+  }
+  .nav > #nav-check:not(:checked) ~ .nav-links {
+    height: 0px;
+  }
+  .nav > #nav-check:checked ~ .nav-links {
+    height: calc(100vh - 50px);
+    overflow-y: auto;
+  }
+}
+/************************************************************************************
+MEDIA QUERIES
+*************************************************************************************/
+/* for 980px or less */
+@media screen and (min-width: 980px) {
+	
+	.pagewrap {
+		margin: -8px;
+	}
+
+
+}
+
+@media screen and (max-width: 980px) {
+	
+	.pagewrap {
+		width: 94%;
+	}
+	.content {
+		border-color: #3b284b;
+		width: 65%;
+	}
+	.sidebar {
+		border-color: #3b284b;
+		width: 30%;
+	}
+
+
+}
+
+
+
+/* for 700px or less */
+@media screen and (max-width: 700px) {
+	.titulo{
+		width: auto;
+		float: none;
+	}
+
+	.spotify{
+		width: auto;
+		float: none;
+
+	}
+
+	.perfil{
+		width: auto;
+		float: none;
+	}
+	.content {
+		width: auto;
+		float: none;
+	}
+	.sidebar {
+		width: auto;
+		float: none;
+	}
+
+}
+
+/* for 480px or less */
+@media screen and (max-width: 480px) {
+	.wrapper{
+		margin-left:0%;
+		margin-right: 0%;
+	}
+	.header {
+		height: auto;
+	}
+	h1 {
+		font-size: 24px;
+	}
+	.sidebar {
+		display: none;
+	}
+
+	.subtitulo{
+		display: none;
+	}
+	.perfil{
+		float: center;
+	}
+
+}
+
+/* border & guideline (you can ignore these) */
+
+.header, .content,.sidebar {
+	margin-bottom: 5px;
 }
