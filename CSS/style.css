@@ -13,6 +13,10 @@ p{
 	text-align: justify;
 }
 
+.body{
+	background-color: #ddd1e7;
+}
+
 .post{
 	padding: 2px;
 }
@@ -47,8 +51,49 @@ p{
 }
 
 .pagewrap{
-	background-color: #744e94;
+	background-color: #ddd1e7;
 	padding: 20px auto;
+}
+
+.hero-image{
+  	width: 100%;
+  	height: 200px;
+	position: relative;
+  	background-position: center;
+  	background-repeat: no-repeat;
+  	background-size: cover;
+}
+
+.hero-image[id="banner"]{
+	background-image:  linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../leonas.png");
+}
+
+.hero-image[id="m1"]{
+	background-image:  linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../Martan.png");
+}
+.hero-image[id="m2"]{
+	background-image:  linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../Dark_Knight.png");
+}
+
+.hero-image[id="m3"]{
+	background-image:  linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../Coincidência F.png");
+}
+
+.hero-image[id="m4"]{
+	background-image:  linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../Anna Von Bismarck.png");
+}
+
+.hero-text {
+	display: flex;
+    flex-direction: row;
+    justify-content: center;
+	align-items: center;
+	text-align: center;
+	position: relative;
+  	top: 50%;
+  	left: 50%;
+  	z-index: 0;
+  	transform: translate(-50%, -50%);
 }
 
 .header{
@@ -58,30 +103,44 @@ p{
 .content{
 	height: 100%;
 	padding: 20px;
-	border-color: #3b284b;
-	width: 60%;
+	width: 73%;
 	float: left;
-	background-color: #744e94;
+	background-color: #b297c9;
 }
 
 .sidebar{
-	border-color: #3b284b;
+	height: 100%;
+	width: 25%;
 	padding: 9px;
 	float: right;
-	background-color: #744e94;
+	background-color: #b297c9;
+}
+
+.social{
+	display: flex;
+    flex-direction: row;
+    justify-content: center;
+	align-items: center;
+	text-align: center;
 }
 
 .footer{
+	padding: 10px;
 	clear: both;
 	background-color: #3b284b;
 }
 
+.copyright{
+	color: #bbb;
+	text-align: center;
+}
 
 .nav {
-  height: 50px;
-  width: 100%;
-  background-color: #3b284b;
-  position: relative;
+	z-index: 1;
+  	height: 50px;
+  	width: 100%;
+ 	background-color: #3b284b;
+ 	position: relative;
 }
 
 .nav > .nav-header {
@@ -172,10 +231,12 @@ MEDIA QUERIES
 @media screen and (min-width: 980px) {
 	
 	.pagewrap {
-		margin: -8px;
+			margin: -8px;
 	}
 
-
+	.body{
+		padding: 50px;
+	}
 }
 
 @media screen and (max-width: 980px) {
