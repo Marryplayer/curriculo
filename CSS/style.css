@@ -255,7 +255,10 @@ MEDIA QUERIES
 		border-color: #3b284b;
 		width: 30%;
 	}
-
+	
+	.perfil{
+		width:5%;
+	}
 
 }
 
@@ -275,7 +278,7 @@ MEDIA QUERIES
 	}
 
 	.perfil{
-		width: auto;
+		width: 5%;
 		float: none;
 	}
 	.content {
