@@ -48,6 +48,7 @@ p{
 
 .perfil{
 	border-radius:200px;
+	max-width:100%;
 }
 
 .pagewrap{
@@ -236,6 +237,9 @@ MEDIA QUERIES
 
 	.body{
 		padding: 50px;
+	}
+	.foto{
+		width:25%;
 	}
 }
 
